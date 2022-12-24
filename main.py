@@ -59,3 +59,31 @@ print(type(conjunto2))
 # conjunto2.add(20) Nao eh mais possivel adicionar elementos ja que este conjunto foi congelado
 texto = "Meu nome eh joao o nome do Meu cachorro tambem eh joao"
 print(set(texto.split()))
+texto_dividido = texto.split()
+
+print(texto_dividido)
+print()
+print("Numero de vezes que cada palavra aparece no texto")
+dicionario = dict()
+for i in texto_dividido:
+    dicionario[i] = texto_dividido.count(i)
+
+print(dicionario)
+
+"""
+Maneiras de iterar um dicionario
+"""
+print("Quando somente as chaves do dicionario importa")
+for chave in dicionario.keys():
+    print(chave)
+
+print("Quando somente os valores importa")
+for valor in dicionario.values():
+    print(valor)
+
+print("Quando o par chave - valor importa")
+for item in dicionario.items():
+    print(item)
+
+for chave, valor in dicionario.items():
+    print(f'Chave: {chave} - Valor: {valor}')

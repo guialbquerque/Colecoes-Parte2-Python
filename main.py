@@ -31,23 +31,24 @@ Nao eh possivel acessar posicoes de elementos num conjunto pois nao existe ordem
 """
 Operacao Uniao com conjuntos
 """
-print(set(alunos_datascience) | set(alunos_machinelearning))
+print(f'Operacao Uniao com conjuntos - {set(alunos_datascience) | set(alunos_machinelearning)}')
 
 """
-Operacao Interseccao - elementos que existem nos dois conjuntos
+Operacao Interseccao - elementos que existem nos dois conjuntos 
 """
-print(set(alunos_datascience) & set(alunos_machinelearning))
+print(f'Operacao Interseccao - {set(alunos_datascience) & set(alunos_machinelearning)}')
 
 """
 Elementos que só existem no primeiro conjunto excluindo elementos em comum com outro conjunto
 """
-print(set(alunos_datascience) - set(alunos_machinelearning))
+print(f'Elementos que só existem no primeiro conjunto, '
+      f'excluindo os em comum com outro conjuntio: \n {set(alunos_datascience) - set(alunos_machinelearning)}')
 
 """
 Operacao OU exclusivo, elementos que so existem ou em conjunto ou em outro
 """
 
-print(set(alunos_datascience) ^ set(alunos_machinelearning))
+print(f'Operacao OU exclusivo - {set(alunos_datascience) ^ set(alunos_machinelearning)}')
 
 conjunto2.add(5)  # Metodo para adicionar elementos num conjunto
 print(conjunto2)

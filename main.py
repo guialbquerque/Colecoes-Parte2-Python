@@ -1,6 +1,8 @@
 """
 Curso Collections parte 2 - Alura
 """
+from collections import defaultdict
+from collections import Counter
 
 alunos_datascience = [15, 23, 56, 30]
 alunos_machinelearning = [23, 56, 40, 18]
@@ -57,7 +59,7 @@ print(conjunto2)
 
 conjunto2 = frozenset(conjunto2)
 print(type(conjunto2))
-# conjunto2.add(20) Nao eh mais possivel adicionar elementos ja que este conjunto foi congelado
+# conjunto2.add(20) Nao é mais possivel adicionar elementos ja que este conjunto foi congelado
 texto = "Meu nome eh joao o nome do Meu cachorro tambem eh joao"
 print(set(texto.split()))
 texto_dividido = texto.split()
@@ -65,7 +67,7 @@ texto_dividido = texto.split()
 print(texto_dividido)
 print()
 print("Numero de vezes que cada palavra aparece no texto")
-dicionario = dict()
+dicionario = {}
 for i in texto_dividido:
     dicionario[i] = texto_dividido.count(i)
 
@@ -88,3 +90,24 @@ for item in dicionario.items():
 
 for chave, valor in dicionario.items():
     print(f'Chave: {chave} - Valor: {valor}')
+
+"""
+Segunda maneira de contar as palavras numa string e adicionar num dicionario padrao
+"""
+
+dicionario2 = defaultdict(int)
+texto = texto.lower()
+for p in texto.split():
+    cont = dicionario2[p]
+    dicionario2[p] = cont + 1
+
+print(f'Dicionario usando dictdefault: \n{dicionario2}')
+
+"""
+Terceira maneira de contar as palavras
+"""
+
+novo_dict = Counter(texto.split())
+print(f'Usando Counter: {novo_dict}')
+
+print(Counter(texto))

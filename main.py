@@ -161,9 +161,8 @@ print("Contando os 10 caracteres mais comuns em textos aleatorios e gerando freq
 
 
 def freq_de_caracteres_mais_comuns(texto):
-    aparicoes = dict((Counter(texto.lower())))
-    total_aparicoes = sum(aparicoes.values())
-    for caractere, frequencia in Counter(texto).most_common(10):
+    total_aparicoes = sum(Counter(texto.lower()).values())
+    for caractere, frequencia in Counter(texto.lower()).most_common(10):
         print(f'{caractere} --> {(frequencia / total_aparicoes) * 100:.2f}%')
 
 

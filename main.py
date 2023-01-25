@@ -167,7 +167,9 @@ def freq_de_caracteres_mais_comuns(texto):
 
 
 freq_de_caracteres_mais_comuns(texto1)
+
 print("------------------------------")
+
 freq_de_caracteres_mais_comuns(texto2)
 
 """
